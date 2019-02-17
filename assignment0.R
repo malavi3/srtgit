@@ -1,2 +1,1 @@
-x=rnorm(100)
-plot(x)
+source("~/srtgit/firstscript.R")
