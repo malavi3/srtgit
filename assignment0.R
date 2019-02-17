@@ -1,2 +1,2 @@
-a=c(4,5,8,11)
-sum(a)
+x=rnorm(100)
+plot(x)
