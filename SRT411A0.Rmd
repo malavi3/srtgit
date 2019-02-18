@@ -1,0 +1,122 @@
+---
+title: "Assignment 0"
+author: "Mohammadkhashayar Alavi"
+date: '2019-02-15'
+output:
+  pdf_document: default
+  html_document: default
+---
+
+In this assignment we learn how to write simple scripts with R to do simple tasks.
+
+The document containing instructions and Todos can be downloaded from [here](https://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf).
+
+Github has been used to store each step of the process. A commit has been pushed to my repository after each Todo. The username used for github: **malavi3**
+
+My repository can be reached [here](https://github.com/malavi3/srtgit)
+
+The code and output for each Todo is mentioned below.
+
+####Todo 1
+```{r}
+((2017-2014)/(2014-1993))*100
+```
+
+####Todo 2
+```{r}
+a = 2014
+b = 2017
+c = 1993
+((b-a)/(a-c))*100
+```
+
+####Todo 3
+```{r}
+a=c(4,5,8,11)
+sum(a)
+```
+
+####Todo 4
+```{r}
+x=rnorm(100)
+plot(x)
+```
+
+####Todo 5
+```{r}
+help(sqrt)
+```
+
+####Todo 6
+```{r}
+source("~/srtgit/firstscript.R")
+```
+
+####Todo 7
+```{r}
+P = seq(from=31, to=60, by=1)
+Q = matrix(data=P,ncol=5,nrow=6)
+Q 
+```
+
+####Todo 8
+```{r}
+x1=c(rnorm(100))
+x2=c(rnorm(100))
+x3=c(rnorm(100))
+t=data.frame(a=c(x1), b=c(x1+x2), c=c(x1+x2+x3))
+plot(t)
+```
+
+####Todo 9
+```{r}
+x1=c(rnorm(100))
+x2=c(rnorm(100))
+x3=c(rnorm(100))
+t=data.frame(a=c(x1), b=c(x1+x2), c=c(x1+x2+x3))
+plot(t$a, type="l", ylim=range(t), lwd=3, col=rgb(1,0,0,0.3))
+lines(t$b, type="s", lwd=2, col=rgb(0.3,0.4,0.3,0.9))
+points(t$c, pch=20, cex=4, col=rgb(0,0,1,0.3))
+```
+
+####Todo 10
+```{r}
+d2 = read.table(file="~/srtgit/tst1.txt", header=TRUE)
+d2$g <- d2$g*5
+write.table(d2, file="~/srtgit/tst2.txt", row.names=FALSE)
+```
+
+####Todo 11
+
+In this Todo I used pmax with sqrt as without it a NANS error would be given.
+
+```{r}
+a=rnorm(100)
+b=sqrt(pmax(0,a))
+mean(b)
+```
+
+####Todo 12
+```{r}
+x=strptime(c("20190217", "20141206", "20190504"), format="%Y%m%d")
+y=c(0,0,5)
+plot(x,y)
+```
+
+####Todo Extra
+```{r}
+a=1:100
+a[1:4] <- a[1:4]*10
+a[91:100] <- a[91:100]*10
+a[5:90] <- a[5:90]*0.1
+a
+```
+
+
+#####Resources
+
+[How to present data in Github](https://www.dataquest.io/blog/how-to-share-data-science-portfolio/)
+
+[How to use rmarkdown with rstudio](http://rmarkdown.rstudio.com/)
+
+
