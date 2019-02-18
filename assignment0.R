@@ -1,3 +1,6 @@
-P = seq(from=31, to=60, by=1)
-Q = matrix(data=P,ncol=5,nrow=6)
-Q
+x1=rnorm(100)
+x2=rnorm(100)
+x3=rnorm(100)
+t=data.frame(a=x1, b=(x1+x2), c=(x1+x2+x3))
+plot(t)
+sd(t)
